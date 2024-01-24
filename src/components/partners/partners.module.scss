@@ -1,0 +1,67 @@
+@import url("../../styles/_variables.scss");
+
+.partners {
+  background-color: var(--light-black);
+  .container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 80px;
+    padding: 40px 0;
+    font-weight: 300;
+    h1 {
+        align-self: flex-start;
+      font-size: 30px;
+      color: white;
+    }
+    .partnerContainer {
+        width: 100%;
+      .partnerLogos {
+        max-width: 960px;
+        margin: 0 auto;
+        height: 400px;
+        background-color: var(--light-black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .partners {
+    .container {
+      .partnerContainer {
+        
+        .partnerLogos {
+            height: 200px;
+          flex-direction: row;
+          align-items: center;
+          gap: 40px;
+          img {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .partners {
+    .container {
+      .partnerContainer {
+        width: 1200px;
+        
+      }
+    }
+  }
+}

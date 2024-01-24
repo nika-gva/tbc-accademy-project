@@ -1,0 +1,107 @@
+@import url("../../styles/_variables.scss");
+
+.footer {
+  background-color: var(--secondary-black);
+  .container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-gap: 50px;
+    div {
+      i {
+        background-color: var(--light-black);
+        color: var(--light-black);
+      }
+      button {
+        background: var(--blue-text);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 22px;
+        max-height: 50px;
+      }
+      p {
+        font-size: 23px;
+        color: white;
+      }
+      .footerIcon {
+        color: #7f7a7a;
+      }
+
+      // build footer grid
+
+      &:first-child {
+        grid-area: 1 / 1 / 1 / 1;
+        img {
+          width: 100%;
+          max-width: 160px;
+        }
+      }
+      &:nth-child(2) {
+        grid-area: 2 / 2 / 3 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+      &:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+      }
+      &:last-child {
+        grid-area: 3 / 1 / 4 / 3;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    .container {
+      grid-template-rows: 1fr 1fr;
+      gap: 40px;
+      div {
+        i {
+          background-color: var(--light-black);
+          color: var(--light-black);
+        }
+        button {
+          background: var(--blue-text);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-size: 22px;
+        }
+        p {
+          font-size: 23px;
+          color: white;
+        }
+        .footerIcon {
+          color: #7f7a7a;
+        }
+
+        // build footer grid
+
+        &:nth-child(2) {
+          grid-area: 1 / 2 / 1 / 3;
+          justify-content: end;
+          gap: 30px;
+        }
+        &:nth-child(3) {
+          grid-area: 2 / 2 / 2 / 3;
+          justify-content: end;
+        }
+        &:last-child {
+          grid-area: 2 / 1 / 2 / 2;
+        }
+      }
+    }
+  }
+}
