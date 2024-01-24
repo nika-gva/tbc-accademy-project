@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import styles from "./courses.module.scss";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import courseData from "../../../courses.json"
 
 const Courses = () => {
-  const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState(courseData);
   useEffect(() => {
     const getCourses = async () => {
       const response = await fetch("../../../courses.json");
       const data = await response.json();
       setCourses(data);
     };
-    getCourses();
+    // getCourses();
   }, []);
   return (
     <section className={styles.courses}>

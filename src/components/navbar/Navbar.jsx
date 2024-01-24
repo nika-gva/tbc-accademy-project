@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tbcLogo from "../../assets/logo.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.scss";
@@ -6,7 +6,7 @@ import styles from "./navbar.module.scss";
 const routes = [
   {
     title: "მთავარი",
-    path: "#",
+    path: "/",
   },
   {
     title: "TBC IT",
@@ -25,17 +25,35 @@ const routes = [
 const Navbar = () => {
   const [mobileNavbarState, setMobileNavbarState] = useState("off");
   const [navbarScrolled, setNavbarScrolled] = useState("false");
+  const [scrollHeight, setScrollHeight] = useState(0);
 
   const currentRoute = useLocation();
 
-  const changeBackground = () => {
-    if (window.scrollY >= 34) {
-      setNavbarScrolled("true");
-    } else {
-      setNavbarScrolled("false");
+  const changeMenuPosition = ()=>{
+    if(window.innerWidth > 769){
+      setMobileNavbarState("off")
     }
-  };
-  window.addEventListener("scroll", changeBackground);
+  }
+
+
+
+  useEffect(()=>{
+    const scrollActionsForNavbar = () => {
+      
+      setScrollHeight(window.scrollY)
+      if (window.scrollY >= 34) {
+        setNavbarScrolled("true");
+      }else{
+        setNavbarScrolled("false")
+      }
+      setScrollHeight()
+      
+    };
+    window.addEventListener("scroll", scrollActionsForNavbar);
+    window.addEventListener("resize", changeMenuPosition)
+    
+  },[])
+
   return (
     <header scroll={navbarScrolled}>
       <div className={styles.container}>
@@ -45,10 +63,15 @@ const Navbar = () => {
         <nav active={mobileNavbarState}>
           <ul>
             {routes.map((route, index) => {
-              const {path, title} = route;
+              const { path, title } = route;
               return (
                 <li key={index}>
-                  <Link to={path} current={path === currentRoute.pathname? "on" : "off"}>{title}</Link>
+                  <Link
+                    to={path}
+                    current={path === currentRoute.pathname ? "on" : "off"}
+                  >
+                    {title}
+                  </Link>
                 </li>
               );
             })}

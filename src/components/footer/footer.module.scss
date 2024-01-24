@@ -16,15 +16,24 @@
       i {
         background-color: var(--light-black);
         color: var(--light-black);
+        &:hover{
+          cursor: pointer;
+        }
       }
       button {
         background: var(--blue-text);
         color: white;
         border: none;
         border-radius: 5px;
-        padding: 10px 20px;
+        padding: 0 20px;
         font-size: 22px;
         max-height: 50px;
+        transition: all .5s;
+
+        &:hover{
+          background-color: var(--button-hover);
+          color: black;
+        }
       }
       p {
         font-size: 23px;

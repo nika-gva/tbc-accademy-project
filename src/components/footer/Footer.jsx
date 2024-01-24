@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./footer.module.scss";
 import logo from "../../assets/tbc-footer.webp";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+  const handleClick = () =>{ 
+    alert("functionality will be added soon!")
+  }
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -13,12 +18,12 @@ const Footer = () => {
         </div>
 
         <div>
-          <FaFacebook size={45} className={styles.footerIcon}/>
-          <FaYoutube size={45} className={styles.footerIcon}/>
+          <Link to="https://www.facebook.com/tbcbank/"><FaFacebook size={45} className={styles.footerIcon}/></Link>
+          <Link to="https://www.youtube.com/channel/UCGk9R2LV2ywOL80r8Xc6xtQ"><FaYoutube size={45} className={styles.footerIcon}/></Link>
         </div>
 
         <div>
-            <button>მოგვწერეთ</button>
+            <button onClick={handleClick}>მოგვწერეთ</button>
         </div>
 
         <div>

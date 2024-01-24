@@ -40,6 +40,10 @@ section {
       text-decoration: none;
       font-size: 20px;
       font-weight: bold;
+      transition: all .5s;
+      &:hover{
+        color: var(--link-hover);
+      }
     }
   }
 }

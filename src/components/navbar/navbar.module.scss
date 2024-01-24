@@ -6,8 +6,12 @@ header {
   position: sticky;
   transition: all 0.3s;
   top: 0px;
-  &[scroll="true"] {
-    opacity: 0.9;
+  z-index: 1000;
+  &[scroll=true] {
+    transform: translateY(-100%);
+  }
+  &[scroll=false] {
+    transform: translateY(0);
   }
   .container {
     width: 90%;
@@ -112,6 +116,10 @@ header {
 
 @media screen and (min-width: 769px) {
   header {
+    &[scroll="true"] {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
     .container {
       nav {
         visibility: visible;
