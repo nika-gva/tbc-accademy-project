@@ -3,6 +3,7 @@ import Banner from '../components/banner/Banner'
 import Courses from '../components/courses/Courses'
 import Partners from '../components/partners/Partners'
 import Questions from '../components/questions/Questions'
+import data from "../../questions.json"
 
 export const Usaid = () => {
   return (
@@ -10,7 +11,7 @@ export const Usaid = () => {
       <Banner/>
       <Courses />
       <Partners />
-      <Questions/>
+      <Questions data={data} count={3}/>
     </>
   )
 }

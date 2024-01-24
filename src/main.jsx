@@ -7,6 +7,8 @@ import { Usaid } from "./pages/Usaid";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
+import AllQuestions from "./pages/AllQuestions";
+
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/usaid" element={<Usaid />} />
+        <Route path="/usaid-faq" element={<AllQuestions />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

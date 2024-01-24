@@ -25,7 +25,6 @@ const routes = [
 const Navbar = () => {
   const [mobileNavbarState, setMobileNavbarState] = useState("off");
   const [navbarScrolled, setNavbarScrolled] = useState("false");
-  const [scrollHeight, setScrollHeight] = useState(0);
 
   const currentRoute = useLocation();
 
@@ -39,14 +38,11 @@ const Navbar = () => {
 
   useEffect(()=>{
     const scrollActionsForNavbar = () => {
-      
-      setScrollHeight(window.scrollY)
       if (window.scrollY >= 34) {
         setNavbarScrolled("true");
       }else{
         setNavbarScrolled("false")
       }
-      setScrollHeight()
       
     };
     window.addEventListener("scroll", scrollActionsForNavbar);

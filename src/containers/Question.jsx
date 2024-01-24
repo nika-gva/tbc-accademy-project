@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-// import styles from "./question.module.scss";
 import { MdArrowForwardIos } from "react-icons/md";
 
 const Question = ({ question, answer, index , active,setActive, styles }) => {
