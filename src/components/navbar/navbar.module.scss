@@ -15,14 +15,14 @@ header {
   }
   .container {
     width: 90%;
-    max-width: var(--max-w);
+    max-width: 980px;
     margin: 0 auto;
     justify-content: space-between;
     display: flex;
     align-items: center;
     div{
       img{
-        width: 180px;
+        width: 220px;
       }
     }
     nav {
@@ -117,7 +117,7 @@ header {
 @media screen and (min-width: 769px) {
   header {
     &[scroll="true"] {
-      opacity: 0.9;
+      opacity: 0.8;
       transform: translateY(0);
     }
     .container {

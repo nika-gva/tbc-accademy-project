@@ -5,7 +5,13 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectFade,
+  EffectCoverflow,
+} from "swiper/modules";
 
 import usaid from "../../assets/usaid-logo.webp";
 import space from "../../assets/space.webp";
@@ -36,7 +42,7 @@ const Partners = () => {
         <h1>პროექტის პარტნიორები</h1>
         <div className={styles.partnerContainer}>
           <Swiper
-            effect={"fade"}
+            effect={screenWidth <= 960 ? "slide" : "fade"}
             slidesPerView={1}
             spaceBetween={30}
             loop={true}

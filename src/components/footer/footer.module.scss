@@ -4,9 +4,9 @@
   background-color: var(--secondary-black);
   .container {
     width: 90%;
-    max-width: 960px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 50px 0;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -25,9 +25,9 @@
         color: white;
         border: none;
         border-radius: 5px;
-        padding: 0 20px;
-        font-size: 22px;
-        max-height: 50px;
+        padding: 0 15px;
+        font-size: 16px;
+        max-height: 40px;
         transition: all .5s;
 
         &:hover{
@@ -36,7 +36,7 @@
         }
       }
       p {
-        font-size: 23px;
+        font-size: 16px;
         color: white;
       }
       .footerIcon {
@@ -47,9 +47,11 @@
 
       &:first-child {
         grid-area: 1 / 1 / 1 / 1;
+        display: flex;
+        align-items: center;
         img {
           width: 100%;
-          max-width: 160px;
+          max-width: 100px;
         }
       }
       &:nth-child(2) {
@@ -57,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 10px;
       }
       &:nth-child(3) {
         grid-area: 2 / 1 / 3 / 2;
@@ -74,41 +76,39 @@
   .footer {
     .container {
       grid-template-rows: 1fr 1fr;
-      gap: 40px;
+      gap: 10px;
       div {
-        i {
-          background-color: var(--light-black);
-          color: var(--light-black);
-        }
         button {
-          background: var(--blue-text);
-          color: white;
-          border: none;
-          border-radius: 5px;
-          padding: 10px 20px;
-          font-size: 22px;
+          padding: 9px 35px;
+          line-height: normal;
         }
         p {
-          font-size: 23px;
-          color: white;
+          font-size: 16px;
         }
         .footerIcon {
           color: #7f7a7a;
         }
 
         // build footer grid
-
         &:nth-child(2) {
           grid-area: 1 / 2 / 1 / 3;
           justify-content: end;
-          gap: 30px;
         }
         &:nth-child(3) {
           grid-area: 2 / 2 / 2 / 3;
           justify-content: end;
+          align-items: end;
         }
         &:last-child {
+          display: flex;
+          flex-direction: column;
           grid-area: 2 / 1 / 2 / 2;
+          gap: 10px;
+          p{
+            &:first-child{
+              order: 2;
+            }
+          }
         }
       }
     }

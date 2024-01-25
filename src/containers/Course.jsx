@@ -18,7 +18,7 @@ const Course = ({styles,title, imageUrl, register, rout}) => {
           </p>
         </div>
         <div>
-          <IoArrowForwardSharp size={30} />
+          <IoArrowForwardSharp size={25} />
           <Link to={rout}>კურსის დეტალები</Link>
         </div>
       </div>

@@ -12,14 +12,21 @@ section {
       min-height: 250px;
       width: 90%;
       margin: 0 auto;
-      max-width: var(--max-w);
+      max-width: 980px;
       display: flex;
       justify-content: center;
       flex-direction: column;
       h1 {
         color: white;
-        font-size: 30px;
-        font-weight: 900;
+        &:first-child{
+          font-size: 35px;  
+          font-weight: bold;
+        }
+        &:last-child{
+          font-size: 35px; 
+           
+          font-weight: 900;
+        }
       }
     }
   }
@@ -89,7 +96,7 @@ section {
         }
         .bannerInfo {
           p {
-            font-size: 32px;
+            font-size: 28px;
           }
           a {
             color: var(--blue-text);

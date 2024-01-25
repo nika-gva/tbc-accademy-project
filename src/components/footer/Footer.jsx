@@ -18,8 +18,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <Link to="https://www.facebook.com/tbcbank/"><FaFacebook size={45} className={styles.footerIcon}/></Link>
-          <Link to="https://www.youtube.com/channel/UCGk9R2LV2ywOL80r8Xc6xtQ"><FaYoutube size={45} className={styles.footerIcon}/></Link>
+          <Link to="https://www.facebook.com/tbcbank/"><FaFacebook size={40} className={styles.footerIcon}/></Link>
+          <Link to="https://www.youtube.com/channel/UCGk9R2LV2ywOL80r8Xc6xtQ"><FaYoutube size={40} className={styles.footerIcon}/></Link>
         </div>
 
         <div>
